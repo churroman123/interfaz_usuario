@@ -19,7 +19,7 @@ public class CConexion{
         try{
             Class.forName("org.postgresql.Driver");
             conectar = DriverManager.getConnection(cadena,usuario,contraseña);
-            JOptionPane.showMessageDialog(null,"CONEXIÓN EXITOSA" );
+            //JOptionPane.showMessageDialog(null,"CONEXIÓN EXITOSA" );
 
             return conectar;
         }catch(Exception e){
