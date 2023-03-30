@@ -90,6 +90,19 @@ public class Secretaria extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jButton14 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         SalirBTN = new javax.swing.JButton();
 
@@ -358,7 +371,7 @@ public class Secretaria extends javax.swing.JFrame {
                                 .addGap(34, 34, 34)
                                 .addComponent(jButton5))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 447, Short.MAX_VALUE)
                                 .addGap(54, 54, 54))))))
         );
         jPanel4Layout.setVerticalGroup(
@@ -411,10 +424,10 @@ public class Secretaria extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab1", jPanel1);
+        jTabbedPane1.addTab("Dat_peido", jPanel1);
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -558,33 +571,153 @@ public class Secretaria extends javax.swing.JFrame {
 
         jPanel5.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 750, -1));
 
-        jTabbedPane1.addTab("tab3", jPanel5);
+        jTabbedPane1.addTab("Ventas", jPanel5);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane6.setViewportView(jTable3);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        jButton10.setText("Todos");
+
+        jButton11.setText("Platino");
+
+        jButton12.setText("Oro");
+
+        jButton13.setText("detalles");
+
+        jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder("Busqueda rápida"));
+
+        jLabel9.setText("Usuario");
+
+        jLabel10.setText("IdUsuario");
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Buscar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel10)
+                    .addComponent(jTextField3)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(jButton14)
+                .addContainerGap())
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton14)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton10)
+                    .addComponent(jButton11)
+                    .addComponent(jButton12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton13)
+                .addGap(65, 65, 65)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 35, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 487, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jButton10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton12)
+                            .addComponent(jButton13)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab3", jPanel6);
+        jTabbedPane1.addTab("Clientes", jPanel6);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
+            .addGap(0, 750, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 487, Short.MAX_VALUE)
+            .addGap(0, 536, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab4", jPanel7);
+        jTabbedPane1.addTab("Dat_cliente", jPanel7);
 
         jPanel10.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 740, 520));
 
@@ -623,6 +756,7 @@ public class Secretaria extends javax.swing.JFrame {
 
     private void ClientesBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClientesBTNActionPerformed
         
+                
     }//GEN-LAST:event_ClientesBTNActionPerformed
 
     private void ClientesBTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClientesBTNMouseClicked
@@ -632,6 +766,9 @@ public class Secretaria extends javax.swing.JFrame {
 
     private void MenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItem1ActionPerformed
         // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(2);
+        CUsuarioCliente objUsCliente = new CUsuarioCliente();
+        objUsCliente.mostrarUsClientes(jTable3);
     }//GEN-LAST:event_MenuItem1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -725,23 +862,37 @@ public class Secretaria extends javax.swing.JFrame {
         objVentas.MostrarVentasmeses(jTable1);
     }//GEN-LAST:event_jButton9ActionPerformed
 
-   /* private void showPopupMenu() {
-        JPopupMenu popupMenu = new JPopupMenu();
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
-        JMenuItem nueva = new JMenuItem("Nueva");
-        JMenuItem modificar = new JMenuItem("Modificar");
-        JMenuItem eliminar = new JMenuItem("Eliminar");
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        String user = jTextField3.getText();
+        String idus = jTextField4.getText();
+        
+        //si el campo usuaio esta vacio buscara por id
+        if(user.isEmpty()){
+            //si el campo id esta vacio entonces manda mensaje error
+            if(idus.isEmpty()){
+                JOptionPane.showMessageDialog(null, "Se necesita un usuario o id venta");
+            }else{
+                //si el campo esta lleno se manda como parametro y se busca en la BD
+                
+            }            
+        }else{
+          if(idus.isEmpty()){
+             //se buscara por ventas del usuario
+             CVentas objVentas = new CVentas();
+             objVentas.BuscarUsuario(jTable1, user);
+            }else{
+              //se buscara por id y usuario la venta
+              CVentas objVentas = new CVentas();
+              objVentas.BuscarUsuarioIdVenta(jTable1, user, idus);
+          }
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
 
-        nueva.addActionListener(e -> System.out.println("nueva solicitud"));
-        modificar.addActionListener(e -> System.out.println("modificar solicitud"));
-        eliminar.addActionListener(e -> System.out.println("eliminar solicitud"));
-
-        popupMenu.add(nueva);
-        popupMenu.add(modificar);
-        popupMenu.add(eliminar);
-
-        popupMenu.show(Solicitud, 0, Solicitud.getHeight());
-    }*/
 
     /**
      * @param args the command line arguments
@@ -795,6 +946,11 @@ public class Secretaria extends javax.swing.JFrame {
     private javax.swing.JButton Solicitud;
     private javax.swing.JPopupMenu SolicitudMenu;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -804,6 +960,7 @@ public class Secretaria extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -811,11 +968,14 @@ public class Secretaria extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -829,12 +989,16 @@ public class Secretaria extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField serchIdVenta;
     private javax.swing.JTextField serchUsuario;
     private javax.swing.JTextField txtNombreSolicitud;
