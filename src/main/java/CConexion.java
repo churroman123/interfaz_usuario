@@ -9,7 +9,7 @@ public class CConexion{
     String usuario = "postgres";
     String contraseña = "123456789";
     String bd = "BD_ArtesGraficas";
-    String ip= "192.168.0.106";
+    String ip= "localhost";
     String puerto = "5432";
     
     String cadena = "jdbc:postgresql://"+ip+":"+puerto+"/"+bd;

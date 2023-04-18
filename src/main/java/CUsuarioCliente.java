@@ -160,11 +160,167 @@ public class CUsuarioCliente {
     
     public void busquedaUsClientes(JTable TablaUsClientes, String user){
         String username = user;
-        
+        //objeto conexión para conectar con la base de datos
         CConexion con = new CConexion();
         
-        String sql ="select idus,username,nomus,ap_pu,ap_mu,gen,estad,cp,calle,numcas from us_clientes where us";
+        //definimos el modelo de la tabla como default
+        DefaultTableModel model = new DefaultTableModel ();
+        
+        String sql ="select idus,username,nomus,ap_pu,ap_mu,gen,estad,cp,calle,numcas from us_clientes where username='"+username+"'";
+        
+        model.addColumn("id usuario");
+        model.addColumn("username");
+        model.addColumn("nombre");
+        model.addColumn("Apellido Pa.");
+        model.addColumn("Apellido Ma.");
+        model.addColumn("genero");
+        model.addColumn("estado");
+        model.addColumn("CP");
+        model.addColumn("calle");
+        model.addColumn("#casa");
         
         
+        TablaUsClientes.setModel(model);
+        
+        String [] datos = new String[10];
+        
+        Statement st;
+        
+        try {
+            st = con.establecerConexion().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
+                datos[6] = rs.getString(7);
+                datos[7] = rs.getString(8);
+                datos[8] = rs.getString(9);
+                datos[9] = rs.getString(10);
+                
+                model.addRow(datos);
+            }
+            
+            TablaUsClientes.setModel(model);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "error");
+        }
+        
+        
+        
+    }
+    
+    public void busquedaIdCliente(JTable TablaUsClientes, String idVenta){
+        String id = idVenta;
+        //objeto conexión para conectar con la base de datos
+        CConexion con = new CConexion();
+        
+        //definimos el modelo de la tabla como default
+        DefaultTableModel model = new DefaultTableModel ();
+        
+        String sql ="select idus,username,nomus,ap_pu,ap_mu,gen,estad,cp,calle,numcas from us_clientes where idus="+id;
+        
+        model.addColumn("id usuario");
+        model.addColumn("username");
+        model.addColumn("nombre");
+        model.addColumn("Apellido Pa.");
+        model.addColumn("Apellido Ma.");
+        model.addColumn("genero");
+        model.addColumn("estado");
+        model.addColumn("CP");
+        model.addColumn("calle");
+        model.addColumn("#casa");
+        
+        
+        TablaUsClientes.setModel(model);
+        
+        String [] datos = new String[10];
+        
+        Statement st;
+        
+        try {
+            st = con.establecerConexion().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
+                datos[6] = rs.getString(7);
+                datos[7] = rs.getString(8);
+                datos[8] = rs.getString(9);
+                datos[9] = rs.getString(10);
+                
+                model.addRow(datos);
+            }
+            
+            TablaUsClientes.setModel(model);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "error");
+        }
+    }
+    
+    public void BuscarUsuarioId(JTable TablaUsClientes, String user,String idVenta){
+        String us = user;
+        String id = idVenta;
+        //objeto conexión para conectar con la base de datos
+        CConexion con = new CConexion();
+        
+        //definimos el modelo de la tabla como default
+        DefaultTableModel model = new DefaultTableModel ();
+        
+        String sql ="select idus,username,nomus,ap_pu,ap_mu,gen,estad,cp,calle,numcas from us_clientes where idus="+id+"and username='"+us+"'";
+        
+        model.addColumn("id usuario");
+        model.addColumn("username");
+        model.addColumn("nombre");
+        model.addColumn("Apellido Pa.");
+        model.addColumn("Apellido Ma.");
+        model.addColumn("genero");
+        model.addColumn("estado");
+        model.addColumn("CP");
+        model.addColumn("calle");
+        model.addColumn("#casa");
+        
+        
+        TablaUsClientes.setModel(model);
+        
+        String [] datos = new String[10];
+        
+        Statement st;
+        
+        try {
+            st = con.establecerConexion().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                datos[5] = rs.getString(6);
+                datos[6] = rs.getString(7);
+                datos[7] = rs.getString(8);
+                datos[8] = rs.getString(9);
+                datos[9] = rs.getString(10);
+                
+                model.addRow(datos);
+            }
+            
+            TablaUsClientes.setModel(model);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "error");
+        }
     }
 }
