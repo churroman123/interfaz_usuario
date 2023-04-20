@@ -204,7 +204,7 @@ public class CVentas {
 
     public void BuscarUsuarioIdVenta(JTable busquedaUsuaroiId, String user, String id) {
         CConexion con = new CConexion();
-
+        
         DefaultTableModel modelo = new DefaultTableModel();
 
         String sql = "select * from ventas where idventa=" + id + "and cliente='" + user + "'";
@@ -215,7 +215,8 @@ public class CVentas {
         modelo.addColumn("Cod. Producto");
         modelo.addColumn("cantidad");
         modelo.addColumn("Fecha");
-
+        
+        
         busquedaUsuaroiId.setModel(modelo);
 
         String[] datos = new String[6];
@@ -331,6 +332,7 @@ public class CVentas {
                     e.printStackTrace();
                 }
             }
+            JOptionPane.showMessageDialog(null, "Venta registrada con exito");
         }
 
     }
