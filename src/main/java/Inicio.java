@@ -128,6 +128,11 @@ public class Inicio extends javax.swing.JFrame {
                         ventanaAnalista.setVisible(true);
                         this.setVisible(false);
                     }
+                    else if(priv.equals("Almacen")){
+                        Almacen ventanaAlmacen = new Almacen();
+                        ventanaAlmacen.setVisible(true);
+                        this.setVisible(false);
+                    }
                     
                 }else{
                     //la contraseña es incorrecta
