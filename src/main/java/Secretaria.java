@@ -288,13 +288,13 @@ public class Secretaria extends javax.swing.JFrame {
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "id", "codigo", "cantidad", "descripción", "proveedor", "precio unit", "cantPedido"
+                "id", "codigo", "nombre", "cantidad", "descripción", "proveedor", "precio unit", "cantPedido"
             }
         ));
         jTable4.setEnabled(false);
@@ -331,7 +331,7 @@ public class Secretaria extends javax.swing.JFrame {
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
         );
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { }));
@@ -413,7 +413,7 @@ public class Secretaria extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jTextCantidadProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(14, 14, 14)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -857,8 +857,8 @@ public class Secretaria extends javax.swing.JFrame {
         double sub;
         double totalVenta = 0;
         for(int i =0; i < model.getRowCount();i++){
-            precio =  Double.parseDouble(model.getValueAt(i, 5).toString());
-            cant =  Integer.parseInt(model.getValueAt(i, 6).toString());
+            precio =  Double.parseDouble(model.getValueAt(i, 6).toString());
+            cant =  Integer.parseInt(model.getValueAt(i, 7).toString());
             sub = precio * cant;
             
             totalVenta += sub;
@@ -960,7 +960,7 @@ public class Secretaria extends javax.swing.JFrame {
         jTextTotalVenta.setText("");
         agregarPedido();
         DefaultTableModel model = (DefaultTableModel) jTable4.getModel();
-        int columnIndex = 6;
+        int columnIndex = 7;
         String textFieldValue = jTextCantidadProducto.getText();
         int lastRowIndex = model.getRowCount() - 1;
         model.setValueAt(textFieldValue, lastRowIndex, columnIndex);
