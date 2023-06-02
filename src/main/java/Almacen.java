@@ -1,4 +1,4 @@
-
+/*Antonio*/
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.DefaultComboBoxModel;
@@ -10,10 +10,8 @@ import javax.swing.JOptionPane;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/**
- *
- * @author churroman123
- */
+
+ 
 public class Almacen extends javax.swing.JFrame {
 
     /**
@@ -925,6 +923,7 @@ public class Almacen extends javax.swing.JFrame {
 
      public void mostarProveedoresComboBox(JComboBox combobox){
         CConexion con = new CConexion();
+        //se hace conexión a la base de datos y seejecuta la sentencia que esta dentro del executeQuery()
         try{
             Statement stmt = con.establecerConexion().createStatement();
             ResultSet rs = stmt.executeQuery("select nomprov from proveedores");
